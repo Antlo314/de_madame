@@ -18,13 +18,23 @@ python -m http.server 8848
 ```
 Then visit `http://127.0.0.1:8848`. (Open `index.html` directly via `file://` works in most browsers too.)
 
-## ⚠️ Placeholders to fill before going live
-These are intentionally left for the client — all clearly marked in code:
+## ✅ Live links wired (research, July 2026)
+| Platform | URL |
+|---|---|
+| Instagram | https://www.instagram.com/de.madame.aye/ |
+| TikTok | https://www.tiktok.com/@de.madame.aye |
+| *Wrong Address* on Tubi | https://tubitv.com/movies/100033521/wrong-address |
+| Film Instagram | https://www.instagram.com/wrongaddressmovie/ |
+| IMDb title page | https://www.imdb.com/title/tt35819880/ |
 
-1. **Booking email** — in `index.html`, find `const BOOKING_EMAIL="";` (in the `<script>`). Set it to the real address, e.g. `"bookings@demadame.com"`. Until set, the booking form **copies the enquiry to the clipboard and opens her Instagram DM** (no lead is lost, no bouncing mail), and the "Bookings" contact link points to Instagram. Once you set the email, the form switches to opening the visitor's mail app pre-filled.
-2. **Streaming links** — the "Texas Tippin" / "Let Me At Em" cards show `Spotify · soon` / `Apple · soon` chips (disabled). When DSP links exist, replace those `<span class="chip soon">` with `<a class="chip live" href="…" target="_blank" rel="noopener">`.
-3. **"Wrong Address" film — IMPORTANT** — the film name comes from her own Instagram bio, so it's presented as her stated work, but the copy claims **no specific role and no year**, and the live IMDb link was **removed**. A fact-check found the IMDb title `tt35819880` ("Wrong Address," 2025) is a real Dallas drama whose listed cast does **not** appear to include her — so it may be a different film or an uncredited part. **Do not add an IMDb/streaming link or a year until she confirms the exact title and her credit in writing.** When confirmed, restore a `<a class="link-gold" href="…">` in the Film section (replacing the "Full cast & credits — forthcoming" text) and add role/year to the meta-row.
-4. **Domain / hosting** — see below. The domain also unlocks three SEO/social items currently left as commented TODOs in `<head>`: `<link rel="canonical">`, `og:url`, and switching `og:image` to an absolute URL (relative image URLs don't render in Facebook/iMessage/LinkedIn link previews).
+Film note: production materials (@wrongaddressmovie) bill her as **Avione Denoxolaux**. Site copy reflects that. Top-line IMDb cast lists are incomplete for smaller credits — IMDb link is the *title* page only, not a verified person credit.
+
+## ⚠️ Still for client before / after go-live
+
+1. **Booking email** — in `index.html`, find `const BOOKING_EMAIL="";`. Until set, the form copies the enquiry + opens Instagram DM.
+2. **DSP streaming** — Spotify / Apple for "Texas Tippin" & "Let Me At Em" still show `· soon` (no public links found).
+3. **Exact role name** on *Wrong Address* — optional polish once she confirms in writing.
+4. **Domain / hosting** — unlocks canonical / `og:url` / absolute `og:image` TODOs in `<head>`.
 
 ## Deploy options (pick one)
 - **Netlify / Vercel / Cloudflare Pages (drag-and-drop):** upload this whole folder. Zero config — it's static.
