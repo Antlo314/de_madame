@@ -1,0 +1,16 @@
+# Intermediate / unused image crops (not referenced by the site)
+assets/site/belle_face_A.jpg
+assets/site/belle_face_B.jpg
+assets/site/belle_right_full.jpg
+assets/site/spot_profile.jpg
+assets/site/studio_band.jpg
+assets/site/turtleneck_A.jpg
+assets/site/turtleneck_B.jpg
+
+# Raw source URL list (expiring signed CDN links, no lasting value)
+assets/instagram/urls.txt
+
+# OS cruft
+Thumbs.db
+.DS_Store
+desktop.ini
