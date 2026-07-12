@@ -586,8 +586,9 @@ body::after{
 .gallery .g:nth-child(1){grid-column:span 5;grid-row:span 2}
 .gallery .g:nth-child(2){grid-column:span 4;grid-row:span 2}
 .gallery .g:nth-child(3){grid-column:span 3;grid-row:span 2}
-.gallery .g:nth-child(4){grid-column:span 4;grid-row:span 1}
-.gallery .g:nth-child(5){grid-column:span 8;grid-row:span 1}
+.gallery .g:nth-child(4){grid-column:span 4;grid-row:span 2}
+.gallery .g:nth-child(5){grid-column:span 4;grid-row:span 2}
+.gallery .g:nth-child(6){grid-column:span 4;grid-row:span 2}
 .gallery .g img{
   width:100%;height:100%;object-fit:cover;
   filter:saturate(.6) contrast(1.05) brightness(.88);
@@ -779,11 +780,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   .hero{align-items:flex-end;padding-bottom:64px}
   .stats{grid-template-columns:repeat(2,1fr)}
   .gallery{grid-auto-rows:minmax(140px,28vw)}
-  .gallery .g:nth-child(1){grid-column:span 7}
-  .gallery .g:nth-child(2){grid-column:span 5}
-  .gallery .g:nth-child(3){grid-column:span 5}
-  .gallery .g:nth-child(4){grid-column:span 7}
-  .gallery .g:nth-child(5){grid-column:span 12}
+  .gallery .g:nth-child(1){grid-column:span 6}
+  .gallery .g:nth-child(2){grid-column:span 6}
+  .gallery .g:nth-child(3){grid-column:span 4}
+  .gallery .g:nth-child(4){grid-column:span 4}
+  .gallery .g:nth-child(5){grid-column:span 4}
+  .gallery .g:nth-child(6){grid-column:span 12;grid-row:span 1;min-height:220px}
   .scroll-cue{display:none}
 }
 @media (max-width:860px){
@@ -946,10 +948,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     <div class="about-grid">
       <div class="about-frame reveal">
         <div class="about-portrait grade">
-          <video autoplay muted loop playsinline poster="assets/site/about_portrait.jpg" aria-hidden="true" id="aboutVideo">
+          <video autoplay muted loop playsinline poster="assets/site/gallery_belle.jpg" aria-hidden="true" id="aboutVideo">
             <source src="assets/site/about_loop.mp4" type="video/mp4" />
           </video>
-          <img src="assets/site/about_portrait.jpg" alt="De Madame portrait" width="832" height="1232" id="aboutFallback" />
+          <img src="assets/site/gallery_belle.jpg" alt="De Madame portrait" width="1024" height="1024" id="aboutFallback" />
           <span class="live-tag">Cinematic</span>
         </div>
         <div class="about-float glass">
@@ -1026,7 +1028,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     <div class="music-grid">
       <article class="track reveal d1">
         <div class="cover">
-          <img src="assets/site/gallery_turtleneck.jpg" alt="" />
+          <img src="assets/site/music_texas.jpg" alt="" />
           <div class="play-hint" aria-hidden="true">▶</div>
           <div class="ctitle">Texas Tippin</div>
         </div>
@@ -1044,7 +1046,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       </article>
       <article class="track reveal d2">
         <div class="cover">
-          <img src="assets/site/studio_divider.jpg" alt="" />
+          <img src="assets/site/music_letme.jpg" alt="" />
           <div class="play-hint" aria-hidden="true">▶</div>
           <div class="ctitle">Let Me At Em</div>
         </div>
@@ -1067,7 +1069,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <!-- ================= STUDIO DIVIDER ================= -->
 <section class="divider" aria-label="Signature quote">
   <div class="grade">
-    <img src="assets/site/studio_divider.jpg" alt="De Madame in the studio" />
+    <img src="assets/site/gallery_studio.jpg" alt="De Madame in the studio" />
   </div>
   <div class="d-copy reveal">
     <div class="q">“I don't compete for a spot. I am the spot.”</div>
@@ -1085,11 +1087,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       <p>Selected frames — editorial, candid, and everything the camera cannot help but follow.</p>
     </div>
     <div class="gallery reveal d1" id="galleryGrid">
+      <div class="g" data-full="assets/site/gallery_belle_pose.jpg"><img src="assets/site/gallery_belle_pose.jpg" alt="De Madame Belle Âme pose" loading="lazy" /><div class="zoom" aria-hidden="true">⌕</div><div class="cap">The investment I am</div></div>
+      <div class="g" data-full="assets/site/gallery_turtleneck.jpg"><img src="assets/site/gallery_turtleneck.jpg" alt="De Madame Dallas night portrait" loading="lazy" /><div class="zoom" aria-hidden="true">⌕</div><div class="cap">Dallas nights</div></div>
       <div class="g" data-full="assets/site/gallery_belle.jpg"><img src="assets/site/gallery_belle.jpg" alt="De Madame editorial portrait" loading="lazy" /><div class="zoom" aria-hidden="true">⌕</div><div class="cap">Belle Âme</div></div>
-      <div class="g" data-full="assets/site/gallery_turtleneck.jpg"><img src="assets/site/gallery_turtleneck.jpg" alt="De Madame press portrait" loading="lazy" /><div class="zoom" aria-hidden="true">⌕</div><div class="cap">Dallas nights</div></div>
       <div class="g" data-full="assets/site/gallery_mirror.jpg"><img src="assets/site/gallery_mirror.jpg" alt="De Madame mirror portrait" loading="lazy" /><div class="zoom" aria-hidden="true">⌕</div><div class="cap">All eyes on me</div></div>
+      <div class="g" data-full="assets/site/music_letme.jpg"><img src="assets/site/music_letme.jpg" alt="De Madame BTS Let Me At Em" loading="lazy" /><div class="zoom" aria-hidden="true">⌕</div><div class="cap">Let Me At Em · BTS</div></div>
       <div class="g" data-full="assets/site/events_flyer.jpg"><img src="assets/site/events_flyer.jpg" alt="De Madame event feature" loading="lazy" /><div class="zoom" aria-hidden="true">⌕</div><div class="cap">On the circuit</div></div>
-      <div class="g" data-full="assets/site/studio_divider.jpg"><img src="assets/site/studio_divider.jpg" alt="De Madame in studio" loading="lazy" /><div class="zoom" aria-hidden="true">⌕</div><div class="cap">In the studio</div></div>
     </div>
   </div>
 </section>
